@@ -1,10 +1,12 @@
 :root{
     --text-primary:#000;
-    --bgPrimary:#fff;
+    --bgPrimary:#f0f2f5;
    --bgSecondary: #F9F9F9;
-   --pink: #0071bd;
+   /* --pink: #0071bd; */
+   --pink: #65334D;
    --light-blue: #e6f7ff;
    --border: #d9d9d9;
+   --navbar: #65334D;
 }
 
 * {
@@ -13,8 +15,14 @@
     box-sizing: border-box;
 }
 
+.footer-link {
+    color: white;
+}
+
+
+
 a:hover{
-    color: var(--pink) !important;
+    color: rgba(255,255,255,0.3) !important;
 }
 
 .app{
@@ -22,9 +30,22 @@ a:hover{
     overflow: hidden;
 }
 
+.ant-menu {
+    background: var(--navbar) !important;
+    color: white;
+}
+
+.ant-menu-item-selected {
+    background: rgba(255,255,255,0.3) !important;
+}
+.ant-menu-item-selected a {
+    color: black;
+}
+
 .navbar{
     flex: 0.2;
-    background-color: rgb(0, 21, 41);
+    /* background-color: rgb(0, 21, 41); */
+    /* background-color: var(--border); */
 }
 
 .main{
@@ -41,11 +62,14 @@ a:hover{
     margin: 10px;
     height: 100vh;
     margin: 0px;
-    background-color: rgb(0, 21, 41);
+    /* background-color: rgb(0, 21, 41); */
+    background-color: var(--navbar);
+    width: 20%;
 }
 
 .logo-container{
-    background-color: #001529;
+    /* background-color: #001529; */
+    background-color: var(--navbar);
     display: flex;
     padding: 20px;
     align-items: center;
@@ -55,7 +79,7 @@ a:hover{
     margin:0 0 0 15px;
 }
 .logo a{
-   color: white;
+   color: white !important;
 }
 .menu-control-container{
     display: none !important;
@@ -63,7 +87,7 @@ a:hover{
     right: 10px !important;
     top: 25px !important;
     font-size: 1.2rem !important;
-    background-color: var(--bgSecondary) !important;
+    /* background-color: var(--bgSecondary) !important; */
     border: none !important;
 }
 
@@ -75,21 +99,12 @@ a:hover{
 }
 
 @media screen and (max-width:1300px){
-    .main{
-        margin-left: 50px;
-    }
 }
 
 @media screen and (max-width:1170px){
-    .main{
-        margin-left: 50px;
-    }
 }
 
 @media screen and (max-width:1000px){
-    .main{
-        margin-left: 100px;
-    }
 }
 
 @media screen and (max-width:800px){
@@ -104,7 +119,7 @@ a:hover{
 
     .main{
         flex: 1;
-        margin-top: 90px;
+        margin-top: 81px;
         margin-left: 0px;
         margin-right: 10px;
     }
@@ -114,7 +129,7 @@ a:hover{
         position:fixed;
         width: 100%;
         z-index: 100;
-        background-color: var(--bgSecondary);
+        background-color: var(--bgPrimary);
     }
   
     .menu-control-container{
@@ -151,6 +166,8 @@ a:hover{
 .coin-heading-container .coin-name{
     font-weight: 900;
     color: var(--pink);
+    display: flex;
+    align-items: center;
 }
 
 .coin-heading-container p{
@@ -246,6 +263,10 @@ a:hover{
     padding: 20px;
 }
 
+.coin-link a:hover {
+    color: black !important;
+}
+
 .link-name{
     text-transform: capitalize;
     font-size: 1rem;
@@ -321,10 +342,10 @@ width: 70%;
     display: flex;
     justify-content: space-between;
     gap: 50px;
-    color: #0071bd;
+    color: var(--pink);
 }
 .chart-title{
-    color: #0071bd !important;
+    color: var(--pink) !important;
 }
 .price-container{
     display: flex !important;
@@ -370,9 +391,21 @@ width: 70%;
 }
 
 .footer {
-    background-color: #001529;
+    background-color: var(--navbar);
     display: flex;
     flex-direction: column;
     padding: 20px;
     align-items: center;
+}
+
+.currency-header {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.currency-card {
+    background: white;
+    margin: 10px 0;
+    padding: 15px 0;
+    border-radius: 10px;
 }
