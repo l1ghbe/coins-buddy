@@ -16,13 +16,21 @@
 }
 
 .footer-link {
-    color: white;
+    color: rgba(255, 255, 255, 0.65);
 }
 
 
 
+
+
+
 a:hover{
-    color: rgba(255,255,255,0.3) !important;
+    color: var(--pink) !important;
+}
+
+.footer-link:hover {
+    color: white !important; 
+    font-weight: 600;
 }
 
 .app{
@@ -408,4 +416,9 @@ width: 70%;
     margin: 10px 0;
     padding: 15px 0;
     border-radius: 10px;
+}
+
+.ant-menu-title-content > a:hover {
+    color: white !important;
+    font-weight: 600 !important;
 }
