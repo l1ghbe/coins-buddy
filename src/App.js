@@ -1,13 +1,20 @@
-import React from 'react'
-import {Switch, Route, Link} from 'react-router-dom'
-import {Layout, Typography, Space} from 'antd'
-import {Navbar, CryptoDetails, Cryptocurrencies, Currencies, Homepage, News} from './components'
+import React from "react";
+import { Switch, Route, Link } from "react-router-dom";
+import { Layout, Typography, Space } from "antd";
+import {
+    Navbar,
+    CryptoDetails,
+    Cryptocurrencies,
+    Currencies,
+    Homepage,
+    News,
+} from "./components";
 
 const App = () => {
     return (
         <div className="app">
             <div className="navbar">
-                <Navbar /> 
+                <Navbar />
             </div>
             <div className="main">
                 <Layout>
@@ -32,19 +39,28 @@ const App = () => {
                     </div>
                 </Layout>
                 <div className="footer">
-                    <Typography.Title level={5} style={{color: 'white', textAlign: 'center'}}>
+                    <Typography.Title
+                        level={5}
+                        style={{ color: "white", textAlign: "center" }}
+                    >
                         Coins Buddy <br />
                         All rights reserved
                     </Typography.Title>
                     <Space>
-                        <Link to="/" className="footer-link">Home</Link>
-                        <Link to="/exchanges" className="footer-link">Exchanges</Link>
-                        <Link to="/news" className="footer-link">News</Link>
+                        <Link to="/" className="footer-link">
+                            Home
+                        </Link>
+                        <Link to="/currencies" className="footer-link">
+                            Currencies
+                        </Link>
+                        <Link to="/news" className="footer-link">
+                            News
+                        </Link>
                     </Space>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default App
+export default App;
